@@ -8,16 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rock Paper Scissors: A Game of Chance</h1>
+    <h1>Rock Paper Scissors: Best of Five</h1>
 
     <div class="form">
     <input class="input" type="text" placeholder="Enter rock, paper or scissors">
     <button class="button" onclick="singleRound()">Enter</button>
     </div>
 
+    <div class="label">Rounds Completed</div>
     <div id="rounds">0</div>
+    <div class="label">Won by User</div>
     <div id="userScore">0</div>
+    <div class="label">Won by Computer</div>
     <div id="computerScore">0</div>
+
+    <div>Match Result</div>
+    <div id="matchResult">No Matches Played</div>
+    <div>Game Result</div>
+    <div id="gameResult">Game in Progress</div>
 
     <script src="js.js"></script>
 

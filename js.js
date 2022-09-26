@@ -25,7 +25,8 @@ function getPlayerChoice() {
 
 }
 
-/* Function singleRound compares the selections to choose a winner in a single round, uses returned input values. This updates the total every time it's run*/
+/* Function singleRound compares the selections to choose a winner in a single round, uses returned input values. 
+This updates the total every time it's run*/
 let rounds = 0;
 let userScore = 0;
 let computerScore = 0;
@@ -53,9 +54,7 @@ function singleRound () {
             userScore++;
         }
 
-    }
-
-    else if (playerSelection === 'paper') {
+    } else if (playerSelection === 'paper') {
 
         if (computerSelection === playerSelection) {
             matchResult = (`You tied! You both chose ${playerSelection}!`);
@@ -71,9 +70,7 @@ function singleRound () {
             userScore++;
         }
 
-    }
-
-    else if (playerSelection === 'scissors') {
+    } else if (playerSelection === 'scissors') {
 
         if (computerSelection === playerSelection) {
             matchResult = (`You tied! You both chose ${playerSelection}!`);
@@ -89,52 +86,50 @@ function singleRound () {
             userScore++;
         }
 
-    }
-
-    else {
+    } else {
         alert('This is not an accepted value, try again.');
         rounds--; /*reset round increment if value is not accepted*/
     }
+
     rounds++;
-    console.log(matchResult);
+    document.getElementById("matchResult").innerHTML = matchResult;
     document.getElementById("rounds").innerHTML = rounds;
     document.getElementById("userScore").innerHTML = userScore;
     document.getElementById("computerScore").innerHTML = computerScore;
     
-    /*added to end game early if user or computer win three rounds */
+    /*added to end game early if user or computer wins three rounds and displays results*/
     if (userScore === 3) {
         console.log('Game over');
-        gameResult = (`You won, ${userScore} rounds to ${computerScore}.`);
+        gameResult = (`You won, ${userScore} round(s) to ${computerScore}.`);
         rounds = 0;
         userScore = 0;
         computerScore = 0;
-        console.log(gameResult);
+        document.getElementById("gameResult").innerHTML = gameResult;
     }
     if (userScore === 3) {
         console.log('Game over');
-        gameResult = (`You lost, ${userScore} rounds to ${computerScore}.`);
+        gameResult = (`You lost, ${userScore} round(s) to ${computerScore}.`);
         rounds = 0;
         userScore = 0;
         computerScore = 0;
-        console.log(gameResult);
+        document.getElementById("gameResult").innerHTML = gameResult;
     }
-
-
+    /*ends game if total rounds played reaches 5 and displays results*/
     if (rounds === 5) {
         console.log('Game over');
             if (userScore > computerScore) {
-                gameResult = (`You won, ${userScore} rounds to ${computerScore}.`);
+                gameResult = (`You won, ${userScore} round(s) to ${computerScore}.`);
             }
             else if (userScore < computerScore) {
-                gameResult = (`You lost, ${userScore} rounds to ${computerScore}.`);
+                gameResult = (`You lost, ${userScore} round(s) to ${computerScore}.`);
             }
             else {
-                gameResult = (`You tied, ${userScore} rounds each!`)
+                gameResult = (`You tied, ${userScore} round(s) each!`);
             }
         rounds = 0;
         userScore = 0;
         computerScore = 0;
-        console.log(gameResult);
+        document.getElementById("gameResult").innerHTML = gameResult;
 
     }
 }
