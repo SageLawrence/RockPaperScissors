@@ -1,4 +1,6 @@
 /* Function getComputerChoice generates a random integer from 1-3 and assigns R/P/S depending on the result */
+
+// did a few things differently than instructed, as I wanted to learn a few new functions of JS
 function getComputerChoice() {
 
     let randVal = Math.floor(Math.random()*3)+1;
