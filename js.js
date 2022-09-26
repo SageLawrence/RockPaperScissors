@@ -27,6 +27,9 @@ function getPlayerChoice() {
 
 /* Function singleRound compares the selections to choose a winner in a single round, uses returned input values */
 let rounds = 0;
+let userScore = 0;
+let computerScore = 0;
+
 function singleRound () {
 
     const computerSelection = getComputerChoice();
@@ -41,10 +44,12 @@ function singleRound () {
         
         else if (computerSelection === 'paper') {
             matchResult = (`You lose, ${computerSelection} beats ${playerSelection}!`);
+            computerScore++;
         }
 
         else {
             matchResult = (`You win, ${playerSelection} beats ${computerSelection}!`);
+            userScore++;
         }
 
     }
@@ -57,10 +62,12 @@ function singleRound () {
         
         else if (computerSelection === 'scissors') {
             matchResult = (`You lose, ${computerSelection} beats ${playerSelection}!`);
+            computerScore++;
         }
 
         else {
             matchResult = (`You win, ${playerSelection} beats ${computerSelection}!`);
+            userScore++;
         }
 
     }
@@ -73,18 +80,31 @@ function singleRound () {
         
         else if (computerSelection === 'rock') {
             matchResult = (`You lose, ${computerSelection} beats ${playerSelection}!`);
+            computerScore++;
         }
 
         else {
             matchResult = (`You win, ${playerSelection} beats ${computerSelection}!`);
+            userScore++;
         }
 
     }
 
     else {
         alert('This is not an accepted value, try again.');
+        rounds--; /*reset round increment if value is not accepted*/
     }
     rounds++;
     console.log(matchResult);
     console.log(rounds);
+    console.log(userScore);
+    console.log(computerScore);
+
+    if (rounds === 5) {
+        console.log('Game over');
+
+        rounds = 0;
+        userScore = 0;
+        computerScore = 0;
+    }
 }
