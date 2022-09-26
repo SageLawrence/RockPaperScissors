@@ -29,6 +29,7 @@ function getPlayerChoice() {
 let rounds = 0;
 let userScore = 0;
 let computerScore = 0;
+let gameResult = 'Game in progress.';
 
 function singleRound () {
 
@@ -102,9 +103,19 @@ function singleRound () {
 
     if (rounds === 5) {
         console.log('Game over');
-
+            if (userScore > computerScore) {
+                gameResult = (`You won, ${userScore} rounds to ${computerScore}.`);
+            }
+            else if (userScore < computerScore) {
+                gameResult = (`You lost, ${userScore} rounds to ${computerScore}.`);
+            }
+            else {
+                gameResult = (`You tied, ${userScore} rounds each!`)
+            }
         rounds = 0;
         userScore = 0;
         computerScore = 0;
+        console.log(gameResult);
+
     }
 }
