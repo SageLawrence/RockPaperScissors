@@ -26,6 +26,7 @@ function getPlayerChoice() {
 }
 
 /* Function singleRound compares the selections to choose a winner in a single round, uses returned input values */
+let rounds = 0;
 function singleRound () {
 
     const computerSelection = getComputerChoice();
@@ -83,6 +84,7 @@ function singleRound () {
     else {
         alert('This is not an accepted value, try again.');
     }
+    rounds++;
     console.log(matchResult);
-
+    console.log(rounds);
 }
