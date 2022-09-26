@@ -25,7 +25,7 @@ function getPlayerChoice() {
 
 }
 
-/* Function singleRound compares the selections to choose a winner in a single round, uses returned input values */
+/* Function singleRound compares the selections to choose a winner in a single round, uses returned input values. This updates the total every time it's run*/
 let rounds = 0;
 let userScore = 0;
 let computerScore = 0;
@@ -97,9 +97,9 @@ function singleRound () {
     }
     rounds++;
     console.log(matchResult);
-    console.log(rounds);
-    console.log(userScore);
-    console.log(computerScore);
+    document.getElementById("rounds").innerHTML = rounds;
+    document.getElementById("userScore").innerHTML = userScore;
+    document.getElementById("computerScore").innerHTML = computerScore;
 
     if (rounds === 5) {
         console.log('Game over');
