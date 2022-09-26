@@ -100,6 +100,25 @@ function singleRound () {
     document.getElementById("rounds").innerHTML = rounds;
     document.getElementById("userScore").innerHTML = userScore;
     document.getElementById("computerScore").innerHTML = computerScore;
+    
+    /*added to end game early if user or computer win three rounds */
+    if (userScore === 3) {
+        console.log('Game over');
+        gameResult = (`You won, ${userScore} rounds to ${computerScore}.`);
+        rounds = 0;
+        userScore = 0;
+        computerScore = 0;
+        console.log(gameResult);
+    }
+    if (userScore === 3) {
+        console.log('Game over');
+        gameResult = (`You lost, ${userScore} rounds to ${computerScore}.`);
+        rounds = 0;
+        userScore = 0;
+        computerScore = 0;
+        console.log(gameResult);
+    }
+
 
     if (rounds === 5) {
         console.log('Game over');
