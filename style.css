@@ -1,11 +1,8 @@
-body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+html {
+    box-sizing: border-box;
 }
 
-h1 {
-    color: purple;
-    text-align: center;
-    background-color: beige;
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
-/* may come finish this and make it pretty later, but I don't have the time at the moment */
