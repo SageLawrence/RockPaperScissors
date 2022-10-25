@@ -6,3 +6,25 @@ html {
     box-sizing: inherit;
 }
 
+img {
+    width: 200px;
+    height: auto;
+    border: 5px solid blueviolet;
+    border-radius: 15px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.head, .subhead{
+    text-align: center;
+}
