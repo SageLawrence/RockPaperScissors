@@ -9,26 +9,41 @@
     <script src="js.js" defer></script>
 </head>
 <body>
-    <h1 class="head">Rock Paper Scissors: Best of Five</h1>
 
-    <h3 class="subhead">Choose your fighter:</h3>
+<h1 class="head">Rock Paper Scissors: Best of Five</h1>
+
+<h3 class="subhead">Choose your fighter:</h3>
 
 <div class="options">
     <div class="option">
-        <div class="label">Rock</div>
-        <img src="images/rock.jpeg" alt="This is rock.">
+        <div>Rock</div>
+        <img id="rock" class="choice" src="images/rock.jpeg" alt="This is rock.">
     </div>
 
     <div class="option">
-        <div class="label">Paper</div>
-        <img src="images/paper.jpg" alt="This is paper.">
+        <div>Paper</div>
+        <img id="paper" class="choice" src="images/paper.jpg" alt="This is paper.">
     </div>
 
     <div class="option">
-        <div class="label">Scissors</div>
-        <img src="images/scissors.jpg" alt="This is scissors.">
+        <div>Scissors</div>
+        <img id="scissors" class="choice" src="images/scissors.jpg" alt="This is scissors.">
     </div>
 </div>
+
+<h3 class="subhead">Results:</h3>
+
+<p>Rounds Won:</p>
+
+<div class="wins"></div>
+
+<p>Rounds Lost:</p>
+
+<div class="losses"></div>
+
+<p>Matches Won by User:</p>
+
+<p>Matches Won by Computer:</p>
 
 </body>
 </html>
