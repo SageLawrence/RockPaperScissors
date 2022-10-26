@@ -25,19 +25,40 @@ function playRound() { // runs onclick from arrow function below
     
     if (userChoice === computerChoice) {
 
-       console.log('Tie');
+        tied();
 
     } else if (userChoice === 'rock' && computerChoice === 'scissors'
     || userChoice === 'paper' && computerChoice === 'rock'
     || userChoice === 'scissors' && computerChoice === 'paper') {
 
-        console.log('Win');
+        winner();
 
     } else {
-        
-        console.log('Loss');
+
+        loser();
 
     }
 }
 
 choices.forEach(choice => choice.addEventListener('click', playRound)); // adds click listener to pics
+
+function winner() {
+    let wins = document.createElement('div');
+    wins.classList.add('winBox');
+    winDiv = document.getElementById('wins');
+    winDiv.appendChild(wins);
+}
+
+function loser() {
+    let losses = document.createElement('div');
+    losses.classList.add('lossBox');
+    lossDiv = document.getElementById('losses');
+    lossDiv.appendChild(losses);
+}
+
+function tied() {
+    let ties = document.createElement('div');
+    ties.classList.add('tieBox');
+    tieDiv = document.getElementById('ties');
+    tieDiv.appendChild(ties);
+}
