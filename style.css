@@ -43,7 +43,7 @@ img {
 }
 
 .winBox, .lossBox, .tieBox {
-    width: 50px;
+    width: 100px;
     height: 50px;
     border: 10px solid white; 
 }
