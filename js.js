@@ -56,8 +56,8 @@ let matchTies = 0;
 function winner(winDiv) {
     let wins = document.createElement('div'); // creates win div in memory
     wins.classList.add('winBox'); // adds CSS traits to box
-    winDiv = document.getElementById('wins'); // sets
-    winDiv.appendChild(wins);
+    winDiv = document.getElementById('wins'); // sets winDiv to the div that contains the win boxes
+    winDiv.appendChild(wins); // adds the boxes to the HTML
 
     winCount++; // counts wins within the current match
 
