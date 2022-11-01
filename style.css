@@ -48,6 +48,6 @@ img {
     border: 10px solid white; 
 }
 
-.wins, .losses {
+#wins, #losses, #ties {
     display: flex;
 }

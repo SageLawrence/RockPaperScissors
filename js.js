@@ -1,15 +1,18 @@
-function getComputerChoice() {
+function getComputerChoice(computerChoice) {
 
     let randVal = Math.floor(Math.random()*3)+1;
 
     if (randVal === 1) {
         computerChoice = 'rock';
+        document.getElementById('computerChoice').src="images/rock.jpeg";
     }
     else if (randVal === 2) {
         computerChoice = 'paper';
+        document.getElementById('computerChoice').src="images/paper.jpg";
     }
     else {
         computerChoice = 'scissors';
+        document.getElementById('computerChoice').src="images/scissors.jpg";
     }
     return(computerChoice);
 
